@@ -7,7 +7,7 @@
     body{
         margin: 2%;
         border: 1px solid black;
-        background-color: #b3b3b3;
+        background-color: #F2B705;
     }
     #image{
         line-height:325px;
@@ -18,7 +18,7 @@
         background-repeat: no-repeat;
         color:#FFFFFF;
         text-align: center;
-        background-color: #cb00d0;
+        background-color: #8C1C03;
         background-size: 100%;
         margin-bottom:25px;
         font-size:150%;
@@ -36,50 +36,47 @@
     }
     </style>
 
-    <script type="text/javascript">
-    function upDate(i){
-      document.getElementById("image").style.backgroundImage="url('"+i.src"')";
-      document.getElementById('image').innerHTML=i.alt;
-      }
+    <script>
 
-    function unDo(i){
-      document.getElementById('image').style.backgroundImage="url()";
-      document.getElementById('image').innerHTML="Hover/Tab over an image below."
-    }
+  function upDate(previewPic){
+    var mousePic = document.getElementById("image");
+    mousePic.style.backgroundImage = "url("+previewPic.src+")";
+    mousePic.style.backgroundColor = "red";
+    mousePic.innerHTML = previewPic.alt;
+  	}
+
+  	function unDo(){
+      var mouseOff = document.getElementById("image");
+      mouseOff.style.backgroundImage="url("+''+")";
+      mouseOff.innerHTML = "Hover over an image below to display";
+  	}
     </script>
 </head>
 
 <body>
-    <h1>Challenge 4</h1>
+    <h1>Challenge 5</h1>
         <div id = "image">
             Hover or tab over/into an image below.
         </div>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
         <img class = "preview" tabindex = "1"
-            onfocus = "upDate(this)"
-            onblur = "unDo()"
-            onmouseover="unDate(this)"
-            onmouseleave="unDo()"
+            alt = "Owl in tree"
+            src = "https://i.imgur.com/AfM4tht.jpg" onmouseover = "upDate(this)" onmouseout = "unDo()" onfocus = "upDate(this)"
+           onclur = "unDo()">
 
-            alt = "Styling with a Bandana"
-            src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg">
 
-        <img class = "preview"
-            tabindex = "1"
-            onfocus = "upDate(this)"
-            onblur = "unDo()"
-            onmouseover = "upDate(this)"
-            onmouseleave = "unDo()"
-
-            alt = "With My Boy"
-            src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG">
-
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
         <img class = "preview" tabindex = "1"
-            onfocus = "upDate(this)"
-            onblur = "unDo()"
-            onmouseover = "upDate(this)"
-            onmouseleave = "unDo()"
+            alt = "fox"
+            src = "https://i.imgur.com/88F0pa2.jpg" onmouseover = "upDate(this)" onmouseout = "unDo()" onfocus = "upDate(this)"
+           onclur = "unDo()">
 
-            src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg"
-            alt = "Young Puppy">
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1"
+            src = "https://i.imgur.com/FhFOiR8.jpg"
+            alt = "beach" onmouseover = "upDate(this)" onmouseout = "unDo()" onfocus = "upDate(this)"
+           onclur = "unDo()">
+
 </body>
 </html>
